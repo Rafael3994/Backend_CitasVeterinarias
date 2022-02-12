@@ -1,10 +1,7 @@
 var express = require('express');
-var router = express.Router();
 const { v4: uuidv4 } = require('uuid');
 
 const Mascota = require('../models').Mascotas;
-
-const auth = require('../middleware/auth'); 
 
 // MOSTRAR MASCOTAS
 exports.mostrarMascotas = async (req, res, next) => {
