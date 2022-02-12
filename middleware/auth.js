@@ -10,7 +10,7 @@ const auth = async (req, res, next) => {
         uuid: data.uuid
       }
     });
-    if (!user) {
+    if (user[0] === undefined) {
       throw new Error();
     }
     req.user = user;
