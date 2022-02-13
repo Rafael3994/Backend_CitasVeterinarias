@@ -5,6 +5,7 @@ const VeterinariosController = require('../controllers/VeterinariosController');
 
 // MOSTRAR VETERINARIOS
 router.get('/', VeterinariosController.mostrarVeterinarios);
+
 // REGISTRAR VETERINARIOS
 router.post('/register', VeterinariosController.register);
 
