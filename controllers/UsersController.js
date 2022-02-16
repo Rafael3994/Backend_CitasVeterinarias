@@ -67,7 +67,7 @@ exports.login =  async (req, res, next) => {
         const newtoken = jwt.sign({uuid: user[0].uuid, name: user[0].name, email: user[0].email}, process.env.JWT_SECRET)
         const response = await Token.create({ uuid: uuidv4(), token: newtoken, uuidUser: user[0].uuid, device: null});
     
-        res.status(200).json('Login User.');
+        res.status(200).json(response.dataValues.token);
       } catch (e) {
         res.status(500).json({});
       }
