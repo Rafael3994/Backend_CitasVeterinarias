@@ -20,7 +20,7 @@ exports.nueva =  async (req, res, next) => {
       const mascotaUser = await Mascota.findAll({
           where: {
               [Op.and]: [
-                  { uuidUser: req.user[0].uuid },
+                  { uuidUser: req.user.uuid },
                   { uuid: mascota }
               ]
           }
@@ -56,7 +56,7 @@ exports.nueva =  async (req, res, next) => {
       let today= new Date(hora)
       let dateInital = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+' '+ (today.getHours()+1) + ":" + today.getMinutes() + ":" + today.getSeconds();
       let dateFinal = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+' '+ (today.getHours()+2) + ":" + today.getMinutes() + ":" + today.getSeconds();
-      const newCita = await Cita.create({ uuid: uuidv4(), uuidUser: req.user[0].uuid, uuidMascota: mascotaUser[0].uuid, uuidVeterinario: resVeterinario[0].uuid, inital_date: dateInital, final_date: dateFinal});
+      const newCita = await Cita.create({ uuid: uuidv4(), uuidUser: req.user.uuid, uuidMascota: mascotaUser[0].uuid, uuidVeterinario: resVeterinario[0].uuid, inital_date: dateInital, final_date: dateFinal});
       res.status(200).json(newCita);
     } catch (error) {
       res.status(500).json({});
@@ -70,7 +70,7 @@ exports.modificarCita = async (req, res, next) => {
     const resCitaUsu = await Cita.findAll({
         where: {
             [Op.and]: [
-                { uuidUser: req.user[0].uuid },
+                { uuidUser: req.user.uuid },
                 { uuid: uuidCita }
             ]
         }
@@ -100,7 +100,7 @@ exports.modificarCita = async (req, res, next) => {
         }, {
         where: {
             [Op.and]: [
-                { uuidUser: req.user[0].uuid },
+                { uuidUser: req.user.uuid },
                 { uuid: uuidCita }
             ]
         }
@@ -118,7 +118,7 @@ exports.cancelar = async (req, res, next) => {
         const resCita = await Cita.findAll({
             where: {
                 [Op.and]: [
-                    { uuidUser: req.user[0].uuid },
+                    { uuidUser: req.user.uuid },
                     { inital_date: dateInital }
                 ]
             }

@@ -13,7 +13,7 @@ const auth = async (req, res, next) => {
     if (user[0] === undefined) {
       throw new Error();
     }
-    req.user = user;
+    req.user = data;
     req.token = token;
     next();
   } catch (error) {
