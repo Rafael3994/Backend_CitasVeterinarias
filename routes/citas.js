@@ -17,7 +17,7 @@ router.delete('/', auth, CitasController.cancelar);
 router.post('/pendientes', auth, CitasController.pendientes);
 
 // Modificar cita
-router.post('/modificar', auth, CitasController.modificarCita);
+router.put('/modificar', auth, CitasController.modificarCita);
 
 
 module.exports = router;
