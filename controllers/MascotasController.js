@@ -17,7 +17,7 @@ exports.mostrarMascotas = async (req, res, next) => {
 exports.register =  async (req, res, next) => {
   try {
     const { name, tipo } = req.body;
-    const newMascota = await Mascota.create({ uuid: uuidv4(), name: name, tipo: tipo, uuidUser: req.user[0].uuid});
+    const newMascota = await Mascota.create({ uuid: uuidv4(), name: name, tipo: tipo, uuidUser: req.user.uuid});
     res.status(200).json(newMascota);
   } catch (error) {
     res.status(500).json({});

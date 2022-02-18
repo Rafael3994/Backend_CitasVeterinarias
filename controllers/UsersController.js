@@ -78,7 +78,7 @@ exports.logoutAll =  async (req, res, next) => {
       try {
         const deleteToken = await Token.destroy({
           where: {
-            uuidUser: req.user[0].uuid
+            uuidUser: req.user.uuid
           }
         });
         deleteToken >= 1 ? res.status(200).json('Logout All.') : res.status(200).json({});
@@ -106,7 +106,7 @@ exports.mastrarMascotas =   async (req, res, next) => {
     try {
       const mascotasUser = await Mascota.findAll({
         where: {
-          uuidUser: req.user[0].uuid
+          uuidUser: req.user.uuid
         }
       });
       res.status(200).json(mascotasUser);
