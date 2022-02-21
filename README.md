@@ -1,4 +1,4 @@
-# Proyecto4_Backend_Movies
+# Proyecto5_Backend_CitasVeterianarias
 
 Este proyecto es un proyecto para desarrollar la API para la gestion de citas de una clinica veterinaria. En ella podremos ver las entidades de Usuarios, Mascotas, Veterinarios y dichas Citas.
 
