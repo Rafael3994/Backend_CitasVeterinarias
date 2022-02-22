@@ -9,6 +9,9 @@ const auth = require('../middleware/auth');
 // MOSTRAR MASCOTAS
 router.get('/', auth, MascotasController.mostrarMascotas);
 
+// MOTRAR MASCOTA POR UUID
+router.get('/uuid', auth, MascotasController.mostrarMascotaByUuid);
+
 // REGISTRAR MASCOTAS
 router.post('/register', auth, MascotasController.register);
 
