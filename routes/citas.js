@@ -19,5 +19,8 @@ router.post('/pendientes', auth, CitasController.pendientes);
 // Modificar cita
 router.put('/modificar', auth, CitasController.modificarCita);
 
+// MOSTRAR citas de una mascota
+router.post('/citasMascotas', auth, CitasController.citasMascotas);
+
 
 module.exports = router;

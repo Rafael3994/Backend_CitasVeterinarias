@@ -160,3 +160,16 @@ exports.pendientes = async (req, res, next) => {
       res.status(500).json({});
     }
 }
+
+exports.citasMascotas = async (req, res, next) => {
+    try {
+        const citas = await Cita.findAll({
+            where: {
+                uuidMascota: req.body.uuidMascota
+            }    
+        });
+        res.status(200).json(citas);
+    } catch (error) {
+        
+    }
+}
