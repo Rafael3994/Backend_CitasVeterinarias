@@ -15,4 +15,7 @@ router.post('/uuid', auth, MascotasController.mostrarMascotaByUuid);
 // REGISTRAR MASCOTAS
 router.post('/register', auth, MascotasController.register);
 
+// MODIFICAR MASCOTA
+router.put('/modificar', auth, MascotasController.modificar);
+
 module.exports = router;

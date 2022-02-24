@@ -36,3 +36,19 @@ exports.register =  async (req, res, next) => {
     res.status(500).json({});
   }
 }
+
+// MODIFICAR MASCOTA
+exports.modificar =  async (req, res, next) => {
+  try {
+    const { uuidMascota, name, tipo } = req.body;
+    const newMascota = await Mascota.update({ 
+      name: name,
+      tipo: tipo
+    }, {
+      where: {uuid: uuidMascota}
+    });
+    res.status(200).json(newMascota);
+  } catch (error) {
+    res.status(500).json({});
+  }
+}
