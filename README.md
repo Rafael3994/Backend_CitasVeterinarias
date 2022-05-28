@@ -1,6 +1,8 @@
-# Proyecto5_Backend_CitasVeterianarias
+# Backend_CitasVeterianarias
 
 Este proyecto es un proyecto para desarrollar la API para la gestion de citas de una clinica veterinaria. En ella podremos ver las entidades de Usuarios, Mascotas, Veterinarios y dichas Citas.
+
+![presentacion](./public/images/readme/presentacion.PNG)
 
 ## Comenzando 🚀
 
@@ -10,7 +12,7 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 
 * Clona el repositorio a tu maquina local
 ```
-git clone https://github.com/Rafael3994/Proyecto5_Backend_CitasVeterinarias.git
+git clone https://github.com/Rafael3994/Backend_CitasVeterinarias.git
 ```
 * Necesitamos un entorno para trabajar con nuestra base de datos mysql. (En mi caso utilize xampp).
 * Instalamos node.js en el ordenador, con ello tambien abremos instalado npm.
@@ -35,7 +37,7 @@ En ellas ponemos nuestros datos correspondientes para conectarnos a la base de d
 ```
 {
   "development": {
-    "username": "NOMBRE_DE_USUARIO"
+    "username": "NOMBRE_DE_USUARIO",
     "password": "CONTRASEÑA",
     "database": "NOMBRE_BD",
     "host": "IP_DB",
@@ -43,14 +45,14 @@ En ellas ponemos nuestros datos correspondientes para conectarnos a la base de d
     "dialect": "mysql"
   },
   "test": {
-    "username": "NOMBRE_DE_USUARIO"
+    "username": "NOMBRE_DE_USUARIO",
     "password": "CONTRASEÑA",
     "database": "NOMBRE_BD",
     "host": "IP_DB",
     "dialect": "mysql"
   },
   "production": {
-    "username": "NOMBRE_DE_USUARIO"
+    "username": "NOMBRE_DE_USUARIO",
     "password": "CONTRASEÑA",
     "database": "NOMBRE_BD",
     "host": "IP_DB",
